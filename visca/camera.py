@@ -1,6 +1,5 @@
 import re
 import binascii
-import numpy as np
 import serial
 from scipy.interpolate import interp1d
 
@@ -157,7 +156,7 @@ class D100(Camera):
         dis = 0.391886608016
         left, right = lr
         up, down = ud
-        coeff = np.cos(angle)
+        coeff = math.cos(angle)
 
         movement = (left * dis * 148.466, )
 
